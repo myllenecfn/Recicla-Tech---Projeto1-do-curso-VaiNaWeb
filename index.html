@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Recicla Tech — Reciclando tecnologias e mudando vidas</title>
+    <meta name="description" content="Conectando doadores de eletrônicos a pessoas e instituições que precisam.">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <div class="container"> 
+        
+        <header class="main-header">
+            <div class="logo-group">
+                <span class="logo-icon">RT</span>
+                <div>
+                    <h1>Recicla Tech</h1>
+                    <span class="tagline">Tem um aparelho eletrônico que não usa mais? Que tal doá-lo a quem precisa?</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#como-funciona">Como funciona</a></li>
+                    <li><a href="#doar" class="btn-doar">Quero doar</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <div class="hero-content">
+                    <span class="subtitle">Saiba como</span>
+                    <h2>Doe eletrônicos que você não usa mais e ajude quem precisa.</h2>
+                    <p>A Recicla Tech é uma iniciativa que visa impactar socialmente e levar a tecnologia a quem mais precisa, conectando doadores a famílias, escolas e ONGs que precisam de equipamentos em bom estado. Com a nossa iniciativa, além de ajudar a quem precisa, ainda conseguimos ajudar o meio ambiente, reduzindo o lixo eletrônico!</p>
+
+                    <div class="action-buttons">
+                        <a class="btn-primary" href="#doar-form">Doe Agora</a>
+                        <a class="btn-secondary" href="#matches">Ver pedidos</a> 
+                    </div>
+
+                    <div class="feature-cards"> 
+                        <div class="card">
+                            <h4>Mapeamento local</h4>
+                            <p>Te mostraremos os pontos de recolhimento e entrega dos aparelhos mais próximos de você.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Segurança</h4>
+                            <p>Todo o processo de forma rápida e, o mais importante, seguro.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Rastreamento</h4>
+                            <p>Você poderá acompanhar o destino do aparelho doado e ter certeza de que sua doação está indo para instituições sérias.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="donation-form-aside" id="doar-form">
+                    <h3>Preencha o Formulário Para Doar</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="tipo">Tipo de aparelho:</label>
+                            <select id="tipo" name="tipo">
+                                <option>Celular</option>
+                                <option>Notebook</option>
+                                <option>Tablet</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <select id="estado" name="estado">
+                                <option>Funcional (pronto uso)</option>
+                                <option>Funcional (mas precisa configuração/formatação)</option>
+                                <option>Com defeito (mas dá pra aproveitar peças)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="local">Local (cidade / bairro):</label>
+                            <input type="text" id="local" name="local" placeholder="Ex.: Niterói - Rio de Janeiro">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao">Descrição:</label>
+                            <textarea id="descricao" name="descricao" placeholder="Marca, modelo e observações do aparelho"></textarea>
+                        </div>
+
+                        <button class="btn-primary full-width" type="submit">Enviar pré-cadastro</button> 
+                    </form>
+                </aside>
+            </section>
+
+            <section class="info-section" id="como-funciona">
+                <h3>Como Funciona?</h3>
+                <ol class="step-list">
+                    <li>O doador preenche um cadastro simples e rápido.</li>
+                    <li>O sistema sugere instituições, ONGS ou famílias mais próximas.</li>
+                    <li>Agendamos a coleta ou indicamos um ponto de entrega.</li>
+                    <li>Após a entrega, aguardamos a confirmação do recebimento.</li>
+                </ol>
+
+                <div class="match-list" id="matches">
+                    <h4>Pedidos mais recentes próximo de você</h4>
+                    <div class="match-item">
+                        <span class="match-avatar">ES</span>
+                        <div>
+                            <strong>Escola Municipal Maite Perroni</strong>
+                            <span class="match-detail">Precisa de 10 tablets. Niterói - Rio de Janeiro</span>
+                        </div>
+                    </div>
+
+                    <div class="match-item">
+                        <span class="match-avatar">INST</span>
+                        <div>
+                            <strong>ONG Reutilize Já</strong>
+                            <span class="match-detail">Aceita notebooks funcionais e celulares. Rocinha - Rio de Janeiro</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="main-footer">
+            <p>Feito por Myllene Nascimento para o Projeto VaiNaWeb </p>
+        </footer>
+    </div>
+</body>
+</html>

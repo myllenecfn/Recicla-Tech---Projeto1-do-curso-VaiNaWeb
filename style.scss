@@ -1,0 +1,262 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; 
+  background-color: $bg; 
+  color: white; 
+  margin: 0;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 20px; 
+}
+
+
+// Botão
+.btn-primary, .btn-doar {
+    background-color: $accent;
+    color: $bg;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($accent, 5%);
+    }
+}
+
+// Botão 2
+.btn-secondary, .btn-pill {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background-color: $card;
+    color: $muted;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+.muted {
+  color: $muted;
+}
+
+// Cards
+.card {
+  background-color: $card;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid $borda-simples;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+// Cabeçalho
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid $borda-simples;
+
+    .logo-group {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; 
+        background-color: $accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: $bg;
+    }
+    
+    .main-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+
+        
+        li:last-child .btn-doar {
+            padding: 8px 12px;
+        }
+    }
+}
+
+
+.hero-section {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+
+    @media (min-width: $breakpoint-mobile) {
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        flex: 2; 
+    }
+
+    .donation-form-aside {
+        flex: 1; 
+    }
+
+    .subtitle {
+        color: $accent;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .feature-cards {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column; 
+        gap: 15px;
+        
+        @media (min-width: $breakpoint-mobile) {
+            flex-direction: row; 
+        }
+    }
+}
+
+
+// Formulário 
+.donation-form-aside {
+    @extend .card; 
+
+    h3 {
+        margin-bottom: 15px;
+        border-bottom: 1px solid $borda-simples;
+        padding-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            color: $muted;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid $borda-simples;
+            border-radius: 5px;
+            background-color: $card; 
+            color: white;
+        }
+        
+        textarea {
+            min-height: 100px;
+        }
+    }
+}
+
+
+.info-section {
+    @extend .card; 
+    margin-top: 20px;
+    padding: 25px;
+
+    h3 {
+        color: $accent;
+        margin-bottom: 15px;
+    }
+    
+    .step-list {
+        margin-left: 20px;
+        margin-bottom: 25px;
+        color: $muted;
+    }
+    
+    .match-list {
+        border-top: 1px solid $borda-simples;
+        padding-top: 15px;
+
+        .match-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: lighten($card, 5%); 
+            margin-bottom: 8px;
+
+            .match-avatar {
+                width: 45px;
+                height: 45px;
+                border-radius: 5px;
+                background-color: $accent;
+                color: $bg;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+            
+            .match-detail {
+                display: block;
+                font-size: 0.85em;
+                color: $muted;
+            }
+        }
+    }
+}
+
+// Rodapé
+.main-footer {
+    text-align: center;
+    padding: 25px 0;
+    color: $muted;
+    font-size: 0.8em;
+}
+
+//Responsividade
+
+@media (max-width: $breakpoint-mobile) {
+    .main-header .main-nav {
+        display: none;
+    }
+    
+    .hero-section {
+        .feature-cards {
+            flex-direction: column; 
+        }
+    }
+}
