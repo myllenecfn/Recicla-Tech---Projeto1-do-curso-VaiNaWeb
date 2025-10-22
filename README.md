@@ -32,5 +32,4 @@ Myllene Conceição Ferreira do Nascimento
 Feito com 💚 como parte do curso de Programação Front-end do projeto VaiNaWeb
 
 
-```bash
-git clone https://github.com/SEU-USUARIO/recicla-tech.git
+```basgit clone https://github.com/SEU-USUARIO/recicla-tech.git
